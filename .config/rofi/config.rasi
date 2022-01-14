@@ -1,5 +1,5 @@
 configuration {
- combi-modi: "window,drun,run,combi";
+ combi-modi: "window,drun,combi";
  font: "Fira Code 12";
  icon-theme: "Papirus";
  show-icons: true;
