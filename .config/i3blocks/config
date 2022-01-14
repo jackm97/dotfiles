@@ -86,11 +86,11 @@ command=date '+%b %d, %Y  %I:%M:%S'
 interval=1
 
 [pactl-volume]
-interval=once
+interval=persist
 markup=pango
-signal=1
+#signal=1
 ## If SUBSCRIBE=1, set interval=persist
-#SUBSCRIBE=0
+SUBSCRIBE=1
 ## Warning color for volume >100%
 #WARN_COLOR="#FFFC00" 
 ## Warning color for volume >150%
