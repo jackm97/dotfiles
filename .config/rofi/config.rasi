@@ -1,0 +1,7 @@
+configuration {
+ combi-modi: "window,drun,run,combi";
+ font: "Fira Code 12";
+ icon-theme: "Papirus";
+ show-icons: true;
+ }
+@theme "onedark"

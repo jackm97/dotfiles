@@ -1,0 +1,116 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+SCRIPT_DIR=/home/jack/.config/i3blocks
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+# Set to %any to automatically pick (Requires playerctl >=2.1.1)
+[mediaplayer]
+label=♪ 
+#command=mediaplayer
+# This picks any player, with vlc as first, and spotify as last choice
+instance=spotify
+interval=1
+#signal=10
+
+[cpu_usage]
+interval=1
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+COLOR_NORMAL=#F8F8F2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+separator=false
+
+[temperature]
+label=
+interval=1
+#T_WARN=70
+#T_CRIT=90
+SENSOR_CHIP="k10temp-pci-00c3"
+
+[gpu-load]
+label=GPU 
+interval=1
+#min_width=GPU 100% 100% 100% 100%
+#GPU_BRAND=NVIDIA // or AMD
+#T_WARN=70
+#T_CRIT=90
+separator=false
+
+[gpu-temperature]
+#T_WARN=70
+#T_CRIT=90
+#WARN_COLOR="#FFFC00" 
+#CRIT_COLOR="#FF0000"
+interval=1
+
+# Date Time
+#
+[time]
+command=date '+%b %d, %Y  %I:%M:%S'
+interval=1
+
+[pactl-volume]
+interval=once
+markup=pango
+signal=1
+## If SUBSCRIBE=1, set interval=persist
+#SUBSCRIBE=0
+## Warning color for volume >100%
+#WARN_COLOR="#FFFC00" 
+## Warning color for volume >150%
+#CRIT_COLOR="#FF0000"
+
+[shutdown_menu]
+full_text= 
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+#command=$SCRIPT_DIR/$BLOCK_NAME/shutdown_menu
+#FG_COLOR=#bbbbbb
+BG_COLOR=#292D3E
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT=Menu:
+ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2 Shutdown -show-icons
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=rofi (must be rofi or zenity)
+LOCKSCRIPT=sh ~/.config/i3/lock.sh
