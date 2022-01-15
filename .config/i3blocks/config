@@ -81,11 +81,16 @@ separator=false
 #CRIT_COLOR="#FF0000"
 interval=1
 
-# Date Time
-#
-[time]
-command=date '+%b %d, %Y  %I:%M:%S'
+[calendar]
+#command=$SCRIPT_DIR/calendar
 interval=1
+LABEL= 
+DATEFMT=+%b %d, %Y  %I:%M:%S
+# SHORTFMT=+%H:%M:%S
+HEIGHT=300
+WIDTH=300
+posX=2000
+posY=30
 
 [pactl-volume]
 interval=persist
@@ -101,5 +106,3 @@ SUBSCRIBE=1
 [shutdown_menu]
 command=sh ~/.config/rofi/powermenu/powermenu.sh
 full_text= 
-
-
