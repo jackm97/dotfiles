@@ -20,7 +20,7 @@
 # signal
 # urgent
 
-SCRIPT_DIR=/home/jack/.config/i3blocks
+SCRIPT_DIR=/home/jack/.config/i3blocks/scripts
 
 # Global properties
 #
@@ -46,7 +46,7 @@ interval=1
 
 [cpu_usage]
 interval=1
-LABEL=CPU 
+LABEL= 
 #min_width=CPU: 100.00%
 #T_WARN=50
 #T_CRIT=80
@@ -64,7 +64,9 @@ interval=1
 SENSOR_CHIP="k10temp-pci-00c3"
 
 [gpu-load]
-label=GPU 
+label= 
+## The above icon is a custom font I made that I can't share due to licensing
+#label=GPU 
 interval=1
 #min_width=GPU 100% 100% 100% 100%
 #GPU_BRAND=NVIDIA // or AMD
@@ -97,20 +99,7 @@ SUBSCRIBE=1
 #CRIT_COLOR="#FF0000"
 
 [shutdown_menu]
+command=sh ~/.config/rofi/powermenu/powermenu.sh
 full_text= 
-# If you are using FontAwesome, we recommend the power-off icon:
-# http://fontawesome.io/icon/power-off/
-#command=$SCRIPT_DIR/$BLOCK_NAME/shutdown_menu
-#FG_COLOR=#bbbbbb
-BG_COLOR=#292D3E
-#HLFG_COLOR=#111111
-#HLBG_COLOR=#bbbbbb
-#BORDER_COLOR=#222222
-#ROFI_TEXT=Menu:
-ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2 Shutdown -show-icons
-#ZENITY_TITLE=Menu
-#ZENITY_TEXT=Action:
-#ZENITY_OPTIONS=--column= --hide-header
-#ENABLE_CONFIRMATIONS=true (must be true or false)
-#LAUNCHER=rofi (must be rofi or zenity)
-LOCKSCRIPT=sh ~/.config/i3/lock.sh
+
+

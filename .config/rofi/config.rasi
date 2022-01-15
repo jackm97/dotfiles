@@ -1,7 +1,6 @@
+/** Basic config file **/
+
 configuration {
- combi-modi: "window,drun,combi";
- font: "Fira Code 12";
- icon-theme: "Papirus";
- show-icons: true;
- }
-@theme "onedark"
+  show-icons:         true;
+  icon-theme:         "Papirus";
+}

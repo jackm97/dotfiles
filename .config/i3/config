@@ -114,7 +114,7 @@ bindsym $mod+a focus parent
 set $ws1 "1: " 
 set $ws2 "2:"
 set $ws3 "3:"
-set $ws4 "4: / "
+set $ws4 "4: / "
 set $ws5 "5:"
 set $ws6 "6"
 set $ws7 "7"
@@ -208,11 +208,15 @@ set $focused_win_cborder #89ACF9
 
 
 # start dmenu/rofi (a program launcher)
-bindsym $mod+d exec "rofi -show combi"
-bindsym $mod+x exec dmenu_run -nb "$bar_bg" -fn "Fira Code" -sb "$focused_win_bg"
+bindsym $mod+d exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh"
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run -nb "$bar_bg" -fn "Fira Code" -sb "$focused_win_bg"
+
+# powermenu
+bindsym $mod+x exec --no-startup-id "sh ~/.config/rofi/powermenu/powermenu.sh"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+exec --no-startup-id ~/.config/i3blocks/pactl-volume/pactl-volume
 bar {
   position top
   status_command i3blocks
@@ -265,6 +269,7 @@ for_window [class="Firefox"] move to workspace $ws1
 for_window [class="GitKraken"] move to workspace $ws3
 for_window [class="jetbrains-pycharm"] move to workspace $ws3
 for_window [class="jetbrains-clion"] move to workspace $ws3
+for_window [class="MATLAB R2021b - academic use"] move to workspace $ws3
 for_window [class="Microsoft Teams - Preview"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="discord"] move to workspace $ws4
