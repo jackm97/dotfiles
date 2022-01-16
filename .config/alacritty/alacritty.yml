@@ -5,7 +5,7 @@ schemes:
   tokyo-night: &tokyo-night
     # Default colors
     primary:
-      background: '#292D3E'
+      background: '#2D3144'
       foreground: '#BFC7D5'
 
     # Normal colors
