@@ -62,5 +62,5 @@ colors: *tokyo-night
 
 font:
   normal:
-      family: Fira Code
+      family: IBM Plex Mono
   size: 11
