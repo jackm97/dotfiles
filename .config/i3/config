@@ -116,7 +116,7 @@ set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4: / "
 set $ws5 "5:"
-set $ws6 "6"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -218,25 +218,25 @@ bindsym $mod+x exec --no-startup-id "sh ~/.config/rofi/powermenu/powermenu.sh"
 # finds out, if available)
 exec --no-startup-id ~/.config/i3blocks/pactl-volume/pactl-volume
 bar {
-    position top
-    status_command i3blocks
-    tray_padding 4
+  position top
+  status_command i3blocks
+  tray_padding 4
 
-    workspace_min_width 65
-    colors {
-        background $bar_bg
-        statusline $sline
-        separator  $sep_color
+  workspace_min_width 65
+  colors {
+    background $bar_bg
+    statusline $sline
+    separator  $sep_color
 
-        focused_workspace  $focused_work_border   $focused_work_bg   $active_text
-        #active_workspace   #282A36 #44475A #F8F8F2
-        inactive_workspace $unfocused_work_border $unfocused_work_bg $inactive_text
-        urgent_workspace   $urgent                $urgent            $active_text
-        #binding_mode       #FF5555 #FF5555 #F8F8F2
-    }
+    focused_workspace  $focused_work_border   $focused_work_bg   $active_text
+    #active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace $unfocused_work_border $unfocused_work_bg $inactive_text
+    urgent_workspace   $urgent                $urgent            $active_text
+    #binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
   
-    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-    font pango:IBM Plex Mono 11
+  font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+  font pango:IBM Plex Mono 11
 }
 
 # Window Colors
@@ -276,6 +276,8 @@ for_window [class="discord"] move to workspace $ws4
 for_window [class="zoom"] move to workspace $ws4
 for_window [class="Evolution.bin"] move to workspace $ws4
 for_window [class="Pavucontrol"] move to workspace $ws4
+for_window [class="Virt-manager"] move to workspace $ws6
+for_window [class="VirtualBox Manager"] move to workspace $ws6
 
 # Floating Windows
 for_window [class="Gpick"] floating enable 
