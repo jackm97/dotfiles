@@ -259,8 +259,8 @@ exec_always --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 239.96
 # i3 gaps
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 2
-gaps inner 20
-gaps outer 20
+gaps inner 10
+gaps outer 10
 
 # picom 
 exec_always --no-startup-id picom --experimental-backend 
