@@ -37,8 +37,8 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id pkill xautolock 
 exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh #-killtime 15 -killer "systemd suspend"
-bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send "Lock enabled" 
-bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send "Lock disabled"
+bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send "Lock enabled" -h string:x-canonical-private-synchronous:lock-notify 
+bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send "Lock disabled" -h string:x-canonical-private-synchronous:lock-notify
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
