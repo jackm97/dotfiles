@@ -209,7 +209,7 @@ set $unfocused_work_border #272935
 # Windows
 set $focused_win_bg #83a598
 set $focused_win_border #282828 
-set $win_inactive_bg #282828
+set $win_inactive_bg #83a598
 set $win_inactive_border #282828
 set $unfocused_win_cborder #1d2021
 set $focused_win_cborder #ebdbb2
@@ -246,7 +246,7 @@ bar {
 # Window Colors
 # class                 border               backgr.          text           indicator              child_border
 client.focused          $focused_win_border  $focused_win_bg  $active_text   $focused_win_cborder   $focused_win_cborder
-client.focused_inactive $win_inactive_border $win_inactive_bg $inactive_text $unfocused_win_cborder $unfocused_win_cborder
+client.focused_inactive $win_inactive_border $win_inactive_bg $active_text $unfocused_win_cborder $unfocused_win_cborder
 client.unfocused        $bar_bg              $bar_bg          $inactive_text $unfocused_win_cborder $unfocused_win_cborder
 client.urgent           $urgent              $urgent          $active_text   $urgent                $urgent
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
