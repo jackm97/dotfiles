@@ -31,13 +31,14 @@ command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 # Set to %any to automatically pick (Requires playerctl >=2.1.1)
 [mediaplayer]
-color=#a89984
+color=#d65e75
 label=♪ 
 #command=mediaplayer
 # This picks any player, with vlc as first, and spotify as last choice
@@ -52,13 +53,13 @@ LABEL=
 #T_WARN=50
 #T_CRIT=80
 #DECIMALS=2
-COLOR_NORMAL=#a89984
-#COLOR_WARN=#FFFC00
-#COLOR_CRIT=#FF0000
+COLOR_NORMAL=#B1D630
+COLOR_WARN=#F8B63F
+COLOR_CRIT=#FF0054
 separator=false
 
 [temperature]
-color=#a89984
+color=#B6E0E5
 label=
 interval=1
 #T_WARN=70
@@ -66,7 +67,7 @@ interval=1
 SENSOR_CHIP="k10temp-pci-00c3"
 
 [gpu-load]
-color=#a89984
+color=#DEB3DF
 label= 
 ## The above icon is a custom font I made that I can't share due to licensing
 #label=GPU 
@@ -78,15 +79,15 @@ interval=1
 separator=false
 
 [gpu-temperature]
-color=#a89984
+color=#BAFFAA
 #T_WARN=70
 #T_CRIT=90
-#WARN_COLOR="#FFFC00" 
-#CRIT_COLOR="#FF0000"
+WARN_COLOR="#F8B63F" 
+CRIT_COLOR="#FF0054"
 interval=1
 
 [calendar]
-color=#a89984
+color=#EDEDED
 #command=$SCRIPT_DIR/calendar
 interval=1
 LABEL= 
@@ -98,18 +99,18 @@ posX=2000
 posY=30
 
 [pactl-volume]
-color=#a89984
+color=#EDEDED
 interval=persist
 markup=pango
 #signal=1
 ## If SUBSCRIBE=1, set interval=persist
 SUBSCRIBE=1
-## Warning color for volume >100%
-#WARN_COLOR="#FFFC00" 
+## Warning color for volume >100%"
+WARN_COLOR=#F8B63F
 ## Warning color for volume >150%
-#CRIT_COLOR="#FF0000"
+CRIT_COLOR=#FF0054
 
 [shutdown_menu]
-color=#a89984
+color=#EDEDED
 command=sh ~/.config/rofi/powermenu/powermenu.sh
 full_text= 

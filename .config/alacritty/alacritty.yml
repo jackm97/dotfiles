@@ -190,8 +190,30 @@ schemes:
       magenta: '0x945e80'
       cyan:    '0x4c7a5d'
       white:   '0xe6d5ae'
+  gruvbox_material_soft_light: &hemisu_dark
+    primary:
+      background: '0x000000'
+      foreground: '0xededed'
+    normal:
+      black:   '0x777777'
+      red:     '0xd65e75'
+      green:   '0xbaffaa'
+      yellow:  '0xece1c8'
+      blue:    '0x9fd3e5'
+      magenta: '0xdeb3df'
+      cyan:    '0xb6e0e5'
+      white:   '0xffffff'
+    bright:
+      black:   '0x777777'
+      red:     '0xd65e75'
+      green:   '0xbaffaa'
+      yellow:  '0xece1c8'
+      blue:    '0x9fd3e5'
+      magenta: '0xdeb3df'
+      cyan:    '0xb6e0e5'
+      white:   '0xffffff'
 
-colors: *gruvbox_material_hard_dark
+colors: *hemisu_dark
 
 font:
   normal:

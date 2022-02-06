@@ -231,25 +231,27 @@ bar {
 
   workspace_min_width 65
   colors {
-    background $bar_bg
-    statusline $sline
-    separator  $sep_color
+    background #000000
+    statusline #B6E0E5
+    separator  #EDEDED
 
-    focused_workspace  $focused_work_border   $focused_work_bg   $active_text
-    #active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace $unfocused_work_border $unfocused_work_bg $inactive_text
-    urgent_workspace   $urgent                $urgent            $active_text
-    #binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  #B576BC #B576BC #FFFFFF
+    active_workspace   #B576BC #B576BC #FFFFFF
+    inactive_workspace #000000 #000000 #FFFFFF
+    urgent_workspace   #FF0054 #FF0054 #FFFFFF
+    binding_mode       #FF0054 #FF0054 #FFFFFF
   }
 }
 
 # Window Colors
-# class                 border               backgr.          text           indicator              child_border
-client.focused          $focused_win_border  $focused_win_bg  $active_text   $focused_win_cborder   $focused_win_cborder
-client.focused_inactive $win_inactive_border $win_inactive_bg $active_text $unfocused_win_cborder $unfocused_win_cborder
-client.unfocused        $bar_bg              $bar_bg          $inactive_text $unfocused_win_cborder $unfocused_win_cborder
-client.urgent           $urgent              $urgent          $active_text   $urgent                $urgent
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# class                 border  bground text    indicator child_border
+client.focused          #67BEE3 #67BEE3 #FFFFFF #BAFFAA   #BAFFAA
+client.focused_inactive #67BEE3 #67BEE3 #EDEDED #000000   #000000
+client.unfocused        #000000 #000000 #CCCCCC #000000   #000000
+client.urgent           #FF0054 #FF0054 #FFFFFF #900000   #FF0054
+client.placeholder      #000000 #000000 #FFFFFF #000000   #000000
+
+client.background       #FFFFFF
 
 # Background
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg 
