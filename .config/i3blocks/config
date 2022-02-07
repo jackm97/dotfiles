@@ -110,6 +110,14 @@ WARN_COLOR=#F8B63F
 ## Warning color for volume >150%
 CRIT_COLOR=#FF0054
 
+[battery]
+color=#a89984
+#command=$SCRIPT_DIR/battery
+interval=30
+#LABEL=BAT
+LABEL= 
+#BAT_NUMBER=0
+
 [shutdown_menu]
 color=#EDEDED
 command=sh ~/.config/rofi/powermenu/powermenu.sh
