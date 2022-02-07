@@ -255,6 +255,9 @@ client.urgent           $urgent              $urgent          $active_text   $ur
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png 
 # Display
 exec_always --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 239.96
+# Screen Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
+bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
 
 # i3 gaps
 # You can also use any non-zero value if you'd like to have a border
