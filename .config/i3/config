@@ -36,7 +36,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id pkill xautolock 
-exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh #-killtime 15 -killer "systemd suspend"
+exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh -killtime 10 -killer "systemctl suspend"
 bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send "Lock enabled" -h string:x-canonical-private-synchronous:lock-notify 
 bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send "Lock disabled" -h string:x-canonical-private-synchronous:lock-notify
 
@@ -254,7 +254,7 @@ client.urgent           $urgent              $urgent          $active_text   $ur
 # Background
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png 
 # Display
-exec_always --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 239.96
+exec_always --no-startup-id xrandr --output eDP-1 --mode 1920x1080
 # Screen Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
 bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify

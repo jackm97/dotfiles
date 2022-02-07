@@ -2,12 +2,12 @@
 
 BLANK='#00000000'
 CLEAR='#ffffff22'
-DEFAULT='#d9a0facc'
-TEXT='#d9a0faee'
-WRONG='#d76e78bb'
-VERIFYING='#EBBE6B'
+DEFAULT='#8ec07ccc'
+TEXT='#8ec07cee'
+WRONG='#fb4934bb'
+VERIFYING='#fabd2f'
 
-i3lock -n \
+i3lock \
 --insidever-color=$CLEAR     \
 --ringver-color=$VERIFYING   \
 \
