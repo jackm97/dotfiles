@@ -111,7 +111,7 @@ WARN_COLOR=#F8B63F
 CRIT_COLOR=#FF0054
 
 [battery]
-color=#a89984
+color=#EDEDED
 #command=$SCRIPT_DIR/battery
 interval=30
 #LABEL=BAT
