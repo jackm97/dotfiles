@@ -15,11 +15,33 @@ My personal dotfiles for i3wm
 - xset
 - feh
 - IBM Plex Mono and FontAwesome5 
+- playerctl
+- lm\_sensors
+- mpstat
+- perl
+- perl-Env
 
 ## Helpful Apps I use
 - nm-applet
 - blueman
 - neovim with [SpaceVim](https://spacevim.org/) distro
+
+## Suspend Hook
+A suspend hook can be used to call ``i3lock`` through the included ``suspend-lock.sh`` script.
+
+The following example hook works, write it to ``/etc/systemd/system/suspend@user.service`` replacing ``user`` with your username
+in both the filename and in the contents below:
+```
+[Unit]
+Description=User suspend actions
+Before=sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/bin/sh /home/user/.config/i3/lock-suspend.sh
+```
 
 ## Two Versions
 - palenight
@@ -35,13 +57,19 @@ Then, choose a theme:
 ```
 # palenight
 cd dotfiles 
-git checkout --recurse-submodules -b palenight
+git checkout --recurse-submodules palenight
 ```
 or
 ```
 # gruvbox
 cd dotfiles
-git checkout --recurse-submodules -b gruvbox
+git checkout --recurse-submodules gruvbox
+```
+or 
+```
+# hemisu
+cd dotfiles
+git checkout --recurse-submodules hemisu
 ```
 
 Finally, install
