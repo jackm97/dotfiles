@@ -20,3 +20,8 @@ ln -s $PWD/.zshrc ~/.zshrc
 #.zshenv
 rm ~/.zshenv
 ln -s $PWD/.zshenv ~/.zshenv
+
+#SpaceVim
+curl -sLf https://spacevim.org/install.sh | bash
+rm -rf ~/.SpaceVim.d
+ln -s $PWD/.SpaceVim.d ~/.SpaceVim.d
