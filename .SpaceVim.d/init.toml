@@ -40,3 +40,6 @@ default_height = 30
 
 [[layers]]
   name = "colorscheme"
+
+[[layers]]
+  name = "sudo"
