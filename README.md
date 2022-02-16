@@ -25,6 +25,8 @@ My personal dotfiles for i3wm
 - nm-applet
 - blueman
 - neovim with [SpaceVim](https://spacevim.org/) distro
+- glow for readmes
+- lazydocker
 
 ## Suspend Hook
 A suspend hook can be used to call ``i3lock`` through the included ``suspend-lock.sh`` script.
@@ -43,9 +45,10 @@ Environment=DISPLAY=:0
 ExecStart=/bin/sh /home/user/.config/i3/lock-suspend.sh
 ```
 
-## Two Versions
+## Three Versions
 - palenight
 - gruvbox
+- hemisu 
 
 ## Installation
 First clone the repo and init the submodules. You can find the submodules by looking through the configs.
@@ -76,8 +79,22 @@ Finally, install
 ```
 sh install.sh 
 ```
-The installation script will install [Oh My ZSH!](https://ohmyz.sh/) and create symlinks to the config files in the repo.
+The installation script create symlinks to the config files in the repo.
 This is useful in the case that you fork my repo and want to make your own changes. It's very easy to then commit those changes
 to the repo.
 
-Note that the ``.zshenv`` and ``.zshrc`` files may not be desirable for you. Comment out the relevant code in the install script.
+### Extras
+Note that the installation also add some **extras** aside from just config files
+- [Oh My ZSH!](https://ohmyz.sh/)
+- [SpaceVim](https://spacevim.org/)
+
+## TODOS:
+Here are some things I'd like to add/change:
+- Volume notification using dunst rather than weird top bar thing
+- Better brightness notification
+- Do not disturb keybinding
+- Change lock enable/disable to caffeine enable and disable and add blocklet for it
+- Change calendar to calcurse
+- Write a curses app for dunst notification tray
+- Add color options for ``gpu-load`` and ``temperature`` blocklets
+- better battery blocklet
