@@ -86,17 +86,12 @@ WARN_COLOR="#F8B63F"
 CRIT_COLOR="#FF0054"
 interval=1
 
-[calendar]
+[calcurse-dropdown]
 color=#EDEDED
 #command=$SCRIPT_DIR/calendar
 interval=1
 LABEL= 
 DATEFMT=+%b %d, %Y  %I:%M:%S
-# SHORTFMT=+%H:%M:%S
-HEIGHT=300
-WIDTH=300
-posX=2000
-posY=30
 
 [pactl-volume]
 color=#EDEDED

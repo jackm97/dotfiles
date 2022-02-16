@@ -302,6 +302,9 @@ focus_follows_mouse no
 # Disable focus on window activaton
 focus_on_window_activation urgent
 
+# Dropdown windows
+for_window [class="Alacritty" title="cal-dropdown"] floating enable, move position 1900 px 35 px, resize set 500 px 500 px
+
 
 
 
