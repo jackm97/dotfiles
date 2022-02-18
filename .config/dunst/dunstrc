@@ -55,7 +55,7 @@
     progress_bar_frame_width = 1
 
     # Set the minimum width for the progress bar
-    progress_bar_min_width = 150
+    progress_bar_min_width = 200
 
     # Set the maximum width for the progress bar
     progress_bar_max_width = 300
@@ -90,6 +90,9 @@
 
     # Defines color of the frame around the notification window.
     frame_color = "#BAFFAA"
+
+    # Highlight color
+    highlight = "#B6E0E5"
 
     # Define a color for the separator.
     # possible values are:

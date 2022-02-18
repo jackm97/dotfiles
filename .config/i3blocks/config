@@ -93,18 +93,6 @@ interval=1
 LABEL= 
 DATEFMT=+%b %d, %Y  %I:%M:%S
 
-[pactl-volume]
-color=#EDEDED
-interval=persist
-markup=pango
-#signal=1
-## If SUBSCRIBE=1, set interval=persist
-SUBSCRIBE=1
-## Warning color for volume >100%"
-WARN_COLOR=#F8B63F
-## Warning color for volume >150%
-CRIT_COLOR=#FF0054
-
 [battery]
 color=#EDEDED
 #command=$SCRIPT_DIR/battery
@@ -116,4 +104,19 @@ LABEL=
 [shutdown_menu]
 color=#EDEDED
 command=sh ~/.config/rofi/powermenu/powermenu.sh
-full_text= 
+full_text=
+separator=false
+
+[pactl-volume]
+color=#EDEDED
+interval=persist
+markup=pango
+#signal=1
+## If SUBSCRIBE=1, set interval=persist
+SUBSCRIBE=1
+## Warning color for volume >100%"
+WARN_COLOR=#F8B63F
+## Warning color for volume >150%
+CRIT_COLOR=#FF0054
+separator=false
+min_width=18

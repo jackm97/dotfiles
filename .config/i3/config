@@ -32,13 +32,12 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
+# Inactivity hooks: screen lock, suspend 
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id pkill xautolock 
-exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh -killtime 10 -killer "systemctl suspend"
-bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send "Lock enabled" -h string:x-canonical-private-synchronous:lock-notify 
-bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send "Lock disabled" -h string:x-canonical-private-synchronous:lock-notify
+exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh # -killtime 10 -killer "systemctl suspend"
+bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send --app-name=caffeine -u low " Caffeine Mode Disabled" -h string:x-canonical-private-synchronous:lock-notify 
+bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send --app-name=caffeine -u low " Caffeine Mode Enabled" -h string:x-canonical-private-synchronous:lock-notify
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -59,7 +58,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -256,7 +255,7 @@ client.background       #FFFFFF
 # Background
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg 
 # Display
-exec_always --no-startup-id xrandr --output eDP-1 --mode 1920x1080
+exec_always --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 239.96
 # Screen Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
 bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
@@ -294,7 +293,7 @@ for_window [class="Blueman-manager"] floating enable
 for_window [class="Matplotlib"] floating enable
 for_window [class="Yad"] floating enable
 for_window [title="^zoom$" class="[zoom]*"] floating enable
-#for_window [class="Thunar"] floating enable
+for_window [class="Thunar"] floating enable, resize set 1000 px 600 px
 
 # Disable mouse focus
 focus_follows_mouse no
@@ -302,9 +301,12 @@ focus_follows_mouse no
 # Disable focus on window activaton
 focus_on_window_activation urgent
 
-# Dropdown windows
-for_window [class="Alacritty" title="cal-dropdown"] floating enable, move position 1900 px 35 px, resize set 500 px 500 px
+# Calendar dropdown
+for_window [title="calcurse-dropdown"] floating enable, move position 1700 px 35 px, resize set 700 px 600 px
+for_window [class="Gnome-calendar"] floating enable, move position 1800 px 35 px, resize set 500 px 500 px
+exec --no-startup-id vdirsyncer sync personal_gcal_sync && vdirsyncer sync 
+bindsym Mod4+c exec --no-startup-id gnome-calendar && i3-msg \[class='Gnome-calendar'\] move container to workspace current
 
-
-
+# Extra shortcuts
+bindsym $mod+Shift+f exec --no-startup-id firefox
 

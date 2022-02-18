@@ -7,7 +7,7 @@ My personal dotfiles for i3wm
 - [i3lock-color](https://github.com/Raymo111/i3lock-color)
 - pactl (should work with both PulseAudio and Pipewire-Pulse)
 - xautolock
-- Alacritty
+- Kitty
 - i3blocks
 - [latest picom](https://github.com/yshui/picom.git)
 - rofi
@@ -27,6 +27,7 @@ My personal dotfiles for i3wm
 - neovim with [SpaceVim](https://spacevim.org/) distro
 - glow for readmes
 - lazydocker
+- vdirsyncer
 
 ## Suspend Hook
 A suspend hook can be used to call ``i3lock`` through the included ``suspend-lock.sh`` script.
@@ -87,6 +88,17 @@ to the repo.
 Note that the installation also add some **extras** aside from just config files
 - [Oh My ZSH!](https://ohmyz.sh/)
 - [SpaceVim](https://spacevim.org/)
+
+## GTK Theme
+I make a note here to help with remembering how to properly set themes.
+
+1. Use lxappearance which works for most apps (e.g. not flatpak)
+2. For flatpak run 
+```
+flatpak override --filesystem=xdg-config/gtk-3.0
+flatpak override --filesystem=$HOME/.themes
+flatpak override --filesystem=$HOME/.icons 
+```
 
 ## TODOS:
 Here are some things I'd like to add/change:
