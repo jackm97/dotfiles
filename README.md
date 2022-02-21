@@ -103,11 +103,9 @@ flatpak override --filesystem=$HOME/.icons
 
 ## TODOS:
 Here are some things I'd like to add/change:
-- Volume notification using dunst rather than weird top bar thing
 - Better brightness notification
 - Do not disturb keybinding
 - Change lock enable/disable to caffeine enable and disable and add blocklet for it
-- Change calendar to calcurse
 - Write a curses app for dunst notification tray
 - Add color options for ``gpu-load`` and ``temperature`` blocklets
 - better battery blocklet
