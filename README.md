@@ -20,6 +20,7 @@ My personal dotfiles for i3wm
 - mpstat
 - perl
 - perl-Env
+- gnome-calendar
 
 ## Helpful Apps I use
 - nm-applet
