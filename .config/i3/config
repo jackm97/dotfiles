@@ -215,7 +215,9 @@ set $focused_win_cborder #ebdbb2
 
 
 # start dmenu/rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh"
+bindsym $mod+d exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh run"
+bindcode --release 133 exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh drun"
+bindsym $mod+Tab exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh window"
 
 # powermenu
 bindsym $mod+x exec --no-startup-id "sh ~/.config/rofi/powermenu/powermenu.sh"
