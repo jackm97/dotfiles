@@ -66,16 +66,16 @@ interval=1
 #T_CRIT=90
 SENSOR_CHIP="k10temp-pci-00c3"
 
-[gpu-load]
+[gpu-load2]
 color=#DEB3DF
 label= 
 ## The above icon is a custom font I made that I can't share due to licensing
 #label=GPU 
 interval=1
-#min_width=GPU 100% 100% 100% 100%
-#GPU_BRAND=NVIDIA // or AMD
-#T_WARN=70
-#T_CRIT=90
+#L_WARN=70
+#L_CRIT=90
+WARN_COLOR="#F8B63F" 
+CRIT_COLOR="#FF0054"
 separator=false
 
 [gpu-temperature]
@@ -91,7 +91,7 @@ color=#EDEDED
 #command=$SCRIPT_DIR/calendar
 interval=1
 LABEL= 
-DATEFMT=+%b %d, %Y  %I:%M:%S
+DATEFMT=+%b %d, %Y -- %I:%M:%S
 
 [battery]
 color=#EDEDED
