@@ -13,14 +13,15 @@ My personal dotfiles for i3wm
 - rofi
 - nvidia-smi for GPU temperature, unfortunately amd/intel gpus aren't supported
 - xset
-- feh
-- IBM Plex Mono and FontAwesome5 
+- feh 
 - playerctl
 - lm\_sensors
 - mpstat
 - perl
 - perl-Env
 - gnome-calendar
+- clipit
+- gnome-polkit
 
 ## Helpful Apps I use
 - nm-applet
@@ -28,7 +29,25 @@ My personal dotfiles for i3wm
 - neovim with [SpaceVim](https://spacevim.org/) distro
 - glow for readmes
 - lazydocker
-- vdirsyncer
+- evolution
+- font manager (flatpak)
+- gnome-software
+- system-config-printer
+- meld
+- dconf-editor
+- file roller
+- shotwell
+- gnome-screenshot
+- gnome-keyring
+- gnome-online-accounts
+- Kvantum + qt5ct
+
+
+## Fonts
+- JetBrains Mono
+- Cantarell
+- Font Awesome 5
+
 
 ## Suspend Hook
 A suspend hook can be used to call ``i3lock`` through the included ``suspend-lock.sh`` script.
@@ -48,9 +67,9 @@ ExecStart=/bin/sh /home/user/.config/i3/lock-suspend.sh
 ```
 
 ## Three Versions
-- palenight
-- gruvbox
-- hemisu 
+- palenight (unmaintained)
+- gruvbox (unmaintained)
+- hemisu  
 
 ## Installation
 First clone the repo and init the submodules. You can find the submodules by looking through the configs.

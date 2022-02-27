@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# rofi launcher setup
+sh -c "cd .config/rofi && sh setup.sh"
+
 #i3 related stuff + alacritty
 rm -rf ~/.config/rofi ~/.config/i3 ~/.config/i3blocks ~/.config/picom ~/.config/dunst ~/.config/alacritty ~/.config/kitty
 ln -s $PWD/.config/rofi ~/.config/rofi
