@@ -41,6 +41,8 @@ My personal dotfiles for i3wm
 - gnome-keyring
 - gnome-online-accounts
 - Kvantum + qt5ct
+- cpupower/powertop/tlp
+- xinput
 
 
 ## Fonts
@@ -126,5 +128,3 @@ Here are some things I'd like to add/change:
 - Do not disturb keybinding
 - Change lock enable/disable to caffeine enable and disable and add blocklet for it
 - Write a curses app for dunst notification tray
-- Add color options for ``gpu-load`` and ``temperature`` blocklets
-- better battery blocklet
