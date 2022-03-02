@@ -3,7 +3,7 @@
 pkill swayidle
 
 swayidle -w \
-	timeout 600 '~/.config/i3/lock.sh' \
-	timeout 605 'swaymsg "output * dpms off"' \
-	timeout 1200 'systemctl suspend' \
-	resume 'swaymsg "output * dpms on"'
+	timeout 600 'swaymsg "output * dpms off"' \
+	timeout 605 '~/.config/i3/lock.sh' \
+	resume 'swaymsg "output * dpms on"' \
+  timeout 900 'systemctl suspend'

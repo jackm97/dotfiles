@@ -93,6 +93,28 @@ interval=1
 LABEL= 
 DATEFMT=+%b %d, %Y -- %I:%M:%S
 
+[dunst]
+interval=once
+format=json
+markup=pango
+MUTE_COLOR=#EDEDED
+DEFAULT_COLOR=#EDEDED
+#min_width=50
+#align=center
+signal=10
+separator=false
+
+[caffiene]
+interval=once
+format=json
+markup=pango
+CAF_COLOR=#EDEDED
+DECAF_COLOR=#EDEDED
+#min_width=50
+#align=center
+signal=20
+separator=false
+
 [battery]
 color=#EDEDED
 #command=$SCRIPT_DIR/battery

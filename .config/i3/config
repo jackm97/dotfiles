@@ -37,8 +37,7 @@ exec --no-startup-id dex-autostart --autostart dex -s ~/.config/autostart/:/etc/
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id pkill xautolock 
 exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh # -killtime 10 -killer "systemctl suspend"
-bindsym $mod+Shift+x exec --no-startup-id xautolock -enable && xset +dpms && notify-send --app-name=caffeine -u low " Caffeine Mode Disabled" -h string:x-canonical-private-synchronous:lock-notify -t 1500 
-bindsym $mod+Shift+d exec --no-startup-id xautolock -disable && xset -dpms && notify-send --app-name=caffeine -u low " Caffeine Mode Enabled" -h string:x-canonical-private-synchronous:lock-notify -t 1500
+bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -320,6 +319,7 @@ bindsym Mod4+c exec --no-startup-id "gnome-calendar && i3-msg \[class='Gnome-cal
 bindsym $altmod+f exec --no-startup-id firefox
 bindsym $altmod+n exec --no-startup-id kitty nvim
 bindsym $altmod+t exec --no-startup-id thunar
+bindsym $altmod+d exec --no-startup-id dunstctl set-paused toggle && pkill -SIGRTMIN+10 i3blocks
 
 # Thunar daemon
 exec --no-startup-id thunar --daemon

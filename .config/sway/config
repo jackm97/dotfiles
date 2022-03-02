@@ -42,8 +42,7 @@ exec --no-startup-id dex-autostart --autostart dex -s ~/.config/autostart/:/etc/
 # Inactivity hooks: screen lock, suspend 
 exec_always --no-startup-id pkill swayidle 
 exec_always --no-startup-id sleep .1 && sh ~/.config/sway/swayidle-start.sh
-bindsym $mod+Shift+d exec --no-startup-id pkill swayidle && notify-send --app-name=caffeine -u low " Caffeine Mode Enabled" -h string:x-canonical-private-synchronous:lock-notify -t 1500
-bindsym $mod+Shift+x exec --no-startup-id swaymsg "exec --no-startup-id sh ~/.config/sway/swayidle-start.sh" && notify-send --app-name=caffeine -u low " Caffeine Mode Disabled" -h string:x-canonical-private-synchronous:lock-notify -t 1500 
+bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks   
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -65,7 +64,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id kitty -d ~
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -298,7 +297,7 @@ bindsym Mod4+c exec --no-startup-id "gnome-calendar && swaymsg \[app_id='gnome-c
 bindsym $altmod+f exec --no-startup-id firefox
 bindsym $altmod+n exec --no-startup-id kitty nvim
 bindsym $altmod+t exec --no-startup-id thunar
-
+bindsym $altmod+d exec --no-startup-id dunstctl set-paused toggle && pkill -SIGRTMIN+10 i3blocks 
 # Thunar daemon
 exec --no-startup-id thunar --daemon
 
