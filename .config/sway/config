@@ -42,7 +42,9 @@ exec --no-startup-id dex-autostart --autostart dex -s ~/.config/autostart/:/etc/
 # Inactivity hooks: screen lock, suspend 
 exec_always --no-startup-id pkill swayidle 
 exec_always --no-startup-id sleep .1 && sh ~/.config/sway/swayidle-start.sh
-bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks   
+bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks
+exec --no-startup-id rm ~/.config/i3blocks/scripts/caffiene/.cache
+
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -248,7 +250,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notif
 
 # gaps
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 5
+for_window [app_id=".*"] border pixel 5
 gaps inner 10
 gaps outer 10
 

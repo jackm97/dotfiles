@@ -37,7 +37,8 @@ exec --no-startup-id dex-autostart --autostart dex -s ~/.config/autostart/:/etc/
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id pkill xautolock 
 exec_always --no-startup-id sleep .1 && xautolock -detectsleep -time 10 -locker ~/.config/i3/lock.sh # -killtime 10 -killer "systemctl suspend"
-bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks 
+bindsym $mod+Shift+x exec --no-startup-id pkill -RTMIN+20 i3blocks
+exec --no-startup-id rm ~/.config/i3blocks/scripts/caffiene/.cache
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -65,6 +66,7 @@ bindsym $mod+Shift+q kill
 
 # screenshot
 bindsym --release Print exec --no-startup-id gnome-screenshot 
+bindsym --release Shift+Print exec --no-startup-id gnome-screenshot -a
 
 # change focus
 bindsym $mod+j focus left
