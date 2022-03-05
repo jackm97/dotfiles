@@ -322,6 +322,8 @@ bindsym $altmod+f exec --no-startup-id firefox
 bindsym $altmod+n exec --no-startup-id kitty nvim
 bindsym $altmod+t exec --no-startup-id thunar
 bindsym $altmod+d exec --no-startup-id dunstctl set-paused toggle && pkill -SIGRTMIN+10 i3blocks
+bindsym $mod+p exec --no-startup-id dunstctl history-pop
+bindsym $mod+Shift+p exec --no-startup-id dunstctl close-all
 
 # Thunar daemon
 exec --no-startup-id thunar --daemon
