@@ -402,10 +402,25 @@
 #    summary = "foobar"
 #    skip_display = true
 
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
+[caffiene-ignore]
+    # This notification will not be saved in history
+    appname = "caffeine"
+    history_ignore = yes
+
+[Spotify-ignore]
+    # This notification will not be saved in history
+    appname = "Spotify"
+    history_ignore = yes
+
+[backlight-ignore]
+    # This notification will not be saved in history
+    appname = "brightlight"
+    history_ignore = yes
+
+[volume-ignore]
+    # This notification will not be saved in history
+    summary = "Volume*"
+    history_ignore = yes
 
 #[skip-display]
 #    # This notification will not be displayed, but will be included in the history

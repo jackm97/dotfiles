@@ -86,6 +86,14 @@ WARN_COLOR="#F8B63F"
 CRIT_COLOR="#FF0054"
 interval=1
 
+[battery]
+color=#EDEDED
+#command=$SCRIPT_DIR/battery
+interval=30
+#LABEL=BAT
+LABEL= 
+#BAT_NUMBER=0
+
 [calcurse-dropdown]
 color=#EDEDED
 #command=$SCRIPT_DIR/calendar
@@ -114,14 +122,6 @@ DECAF_COLOR=#EDEDED
 #align=center
 signal=20
 separator=false
-
-[battery]
-color=#EDEDED
-#command=$SCRIPT_DIR/battery
-interval=30
-#LABEL=BAT
-LABEL= 
-#BAT_NUMBER=0
 
 [shutdown_menu]
 color=#EDEDED

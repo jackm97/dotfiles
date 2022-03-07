@@ -36,21 +36,21 @@ if [[ "$DESKTOP_SESSION" == "i3"  ||  "$DESKTOP_SESSION" == "/usr/share/xsession
   --indicator                  \
   --time-str="%H:%M:%S"        \
   --date-str="%A, %m %Y"
-elif [[ "$DESKTOP_SESSION" == "sway"  ||  "$DESKTOP_SESSION" == "/usr/share/wayland-sessions/sway" ]]; then
-  swaylock -f \
-  --inside-ver-color=$CLEAR     \
-  --ring-ver-color=$VERIFYING   \
-\
-  --inside-wrong-color=$CLEAR   \
-  --ring-wrong-color=$WRONG     \
-\
-  --inside-color=$BLANK        \
-  --ring-color=$DEFAULT        \
-  --line-color=$BLANK          \
-  --separator-color=$DEFAULT   \
-\
-  --text-ver-color=$VERIFYING     \
-  --text-wrong-color=$WRONG       \
-  --image "~/.config/i3/wallpaper.jpg"
+# elif [[ "$DESKTOP_SESSION" == "sway"  ||  "$DESKTOP_SESSION" == "/usr/share/wayland-sessions/sway" ]]; then
+  # swaylock -f \
+  # --inside-ver-color=$CLEAR     \
+  # --ring-ver-color=$VERIFYING   \
+# \
+  # --inside-wrong-color=$CLEAR   \
+  # --ring-wrong-color=$WRONG     \
+# \
+  # --inside-color=$BLANK        \
+  # --ring-color=$DEFAULT        \
+  # --line-color=$BLANK          \
+  # --separator-color=$DEFAULT   \
+# \
+  # --text-ver-color=$VERIFYING     \
+  # --text-wrong-color=$WRONG       \
+  # --image "/home/jack/.config/i3/wallpaper.jpg"
 fi
 

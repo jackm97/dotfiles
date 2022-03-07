@@ -16,6 +16,9 @@ set $altmod Mod4
 input * {
     xkb_layout "us"
     scroll_factor 1
+    tap enabled
+    tap_button_map lrm
+    natural_scroll enable
 }
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -243,14 +246,14 @@ client.background       #FFFFFF
 # Background
 output "*" bg "~/.config/i3/wallpaper.jpg" fill
 # Display
-output Virtual-1 pos 0 0 res 2048 1152
+output eDP-1 pos 0 0 res 1980 1080
 # Screen Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
-bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notify-send "$(brightlight -r)" -h string:x-canonical-private-synchronous:backlight-notify
+bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 10000 && notify-send "$(brightlight -r)" -a brightlight -h string:x-canonical-private-synchronous:backlight-notify
+bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 10000 && notify-send "$(brightlight -r)" -a brightlight -h string:x-canonical-private-synchronous:backlight-notify
 
 # gaps
 # You can also use any non-zero value if you'd like to have a border
-for_window [app_id=".*"] border pixel 5
+default_border pixel 5
 gaps inner 10
 gaps outer 10
 
@@ -279,7 +282,7 @@ for_window [class="VirtualBox Manager"] move to workspace $ws6
 
 # Floating Windows
 for_window [class="Gpick"] floating enable 
-for_window [class="Blueman-manager"] floating enable 
+for_window [app_id="blueman-manager"] floating enable 
 for_window [class="Matplotlib"] floating enable
 for_window [app_id="org.gnome.Software"] floating enable
 for_window [title="^zoom$" class="[zoom]*"] floating enable
@@ -292,7 +295,7 @@ focus_follows_mouse no
 focus_on_window_activation urgent
 
 # Calendar dropdown
-for_window [app_id="gnome-calendar"] floating enable, resize set 27 ppt 35 ppt, move position 73 ppt 0 px
+for_window [app_id="gnome-calendar"] floating enable, resize set 27 ppt 35 ppt, move position 70 ppt 0 px
 bindsym Mod4+c exec --no-startup-id "gnome-calendar && swaymsg \[app_id='gnome-calendar'\] move container to workspace current, focus"
 
 # Extra shortcuts
