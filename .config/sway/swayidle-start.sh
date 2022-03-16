@@ -7,4 +7,4 @@ swayidle -w \
 	timeout 605 '~/.config/i3/lock.sh' \
 	resume 'swaymsg "output * dpms on"' \
   timeout 900 'systemctl suspend' \
-  before-sleep 'sh ~/.config/i3/lock.sh'
+  before-sleep '~/.config/i3/lock.sh'

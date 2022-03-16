@@ -89,7 +89,7 @@ interval=1
 [battery]
 color=#EDEDED
 #command=$SCRIPT_DIR/battery
-interval=30
+interval=1
 #LABEL=BAT
 LABEL= 
 #BAT_NUMBER=0

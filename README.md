@@ -65,7 +65,7 @@ Before=sleep.target
 User=%I
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=/bin/sh /home/user/.config/i3/lock-suspend.sh
+ExecStart=/bin/sh /home/user/.config/i3/lock.sh
 ```
 
 ## Three Versions
