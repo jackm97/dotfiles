@@ -38,7 +38,7 @@ markup=none
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 # Set to %any to automatically pick (Requires playerctl >=2.1.1)
 [mediaplayer]
-color=#d65e75
+color=#F8BD96
 label=♪ 
 #command=mediaplayer
 # This picks any player, with vlc as first, and spotify as last choice
@@ -53,13 +53,13 @@ LABEL=
 #T_WARN=50
 #T_CRIT=80
 #DECIMALS=2
-COLOR_NORMAL=#B1D630
-COLOR_WARN=#F8B63F
-COLOR_CRIT=#FF0054
+COLOR_NORMAL=#ABE9B3
+COLOR_WARN=#FAE3B0
+COLOR_CRIT=#F28FAD
 separator=false
 
 [temperature]
-color=#B6E0E5
+color=#89DCEB
 label=
 interval=1
 #T_WARN=70
@@ -67,27 +67,27 @@ interval=1
 SENSOR_CHIP="k10temp-pci-00c3"
 
 [gpu-load2]
-color=#DEB3DF
+color=#F2CDCD
 label= 
 ## The above icon is a custom font I made that I can't share due to licensing
 #label=GPU 
 interval=1
 #L_WARN=70
 #L_CRIT=90
-WARN_COLOR="#F8B63F" 
-CRIT_COLOR="#FF0054"
+WARN_COLOR="#FAE3B0" 
+CRIT_COLOR="#F28FAD"
 separator=false
 
 [gpu-temperature]
-color=#BAFFAA
+color=#F5C2E7
 #T_WARN=70
 #T_CRIT=90
-WARN_COLOR="#F8B63F" 
-CRIT_COLOR="#FF0054"
+WARN_COLOR="#FAE3B0" 
+CRIT_COLOR="#F28FAD"
 interval=1
 
 [battery]
-color=#EDEDED
+color=#F5E0DC
 #command=$SCRIPT_DIR/battery
 interval=1
 #LABEL=BAT
@@ -95,7 +95,7 @@ LABEL=
 #BAT_NUMBER=0
 
 [calcurse-dropdown]
-color=#EDEDED
+color=#F5E0DC
 #command=$SCRIPT_DIR/calendar
 interval=1
 LABEL= 
@@ -105,8 +105,8 @@ DATEFMT=+%b %d, %Y -- %I:%M:%S
 interval=once
 format=json
 markup=pango
-MUTE_COLOR=#EDEDED
-DEFAULT_COLOR=#EDEDED
+MUTE_COLOR=#F5E0DC
+DEFAULT_COLOR=#F5E0DC
 #min_width=50
 #align=center
 signal=10
@@ -116,21 +116,21 @@ separator=false
 interval=once
 format=json
 markup=pango
-CAF_COLOR=#EDEDED
-DECAF_COLOR=#EDEDED
+CAF_COLOR=#F5E0DC
+DECAF_COLOR=#F5E0DC
 #min_width=50
 #align=center
 signal=20
 separator=false
 
 [shutdown_menu]
-color=#EDEDED
+color=#F5E0DC
 command=sh ~/.config/rofi/powermenu/powermenu.sh
 full_text=
 separator=false
 
 [pactl-volume]
-color=#EDEDED
+color=#F5E0DC
 interval=persist
 markup=pango
 #signal=1

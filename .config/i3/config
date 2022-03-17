@@ -218,9 +218,9 @@ set $focused_win_cborder #ebdbb2
 
 
 # start dmenu/rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh run"
-bindcode --release 133 exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh drun"
-bindsym $mod+Tab exec --no-startup-id "sh ~/.config/rofi/launchers/colorful/launcher.sh window"
+bindsym $mod+d exec --no-startup-id "sh ~/.config/rofi/launchers/text/launcher.sh run"
+bindcode --release 133 exec --no-startup-id "sh ~/.config/rofi/launchers/text/launcher.sh drun"
+bindsym $mod+Tab exec --no-startup-id "sh ~/.config/rofi/launchers/text/launcher.sh window"
 
 # powermenu
 bindsym $mod+x exec --no-startup-id "sh ~/.config/rofi/powermenu/powermenu.sh"
@@ -236,27 +236,27 @@ bar {
 
   workspace_min_width 50
   colors {
-    background #000000
+    background #0b0912 
     statusline #B6E0E5
-    separator  #EDEDED
+    separator  #F5E0DC
 
-    focused_workspace  #B576BC #B576BC #FFFFFF
-    active_workspace   #B576BC #B576BC #FFFFFF
-    inactive_workspace #000000 #000000 #FFFFFF
-    urgent_workspace   #FF0054 #FF0054 #FFFFFF
-    binding_mode       #FF0054 #FF0054 #FFFFFF
+    focused_workspace  #F5E0DC #302D41 #F5E0DC 
+    active_workspace   #F5E0DC #302D41 #F5E0DC 
+    inactive_workspace #0b0912 #0b0912 #F5E0DC 
+    urgent_workspace   #F28FAD #F28FAD #161320 
+    binding_mode       #FAE3B0 #FAE3B0 #161320 
   }
 }
 
 # Window Colors
 # class                 border  bground text    indicator child_border
-client.focused          #67BEE3 #67BEE3 #FFFFFF #BAFFAA   #BAFFAA
-client.focused_inactive #67BEE3 #67BEE3 #FFFFFF #000000   #000000
-client.unfocused        #000000 #000000 #EDEDED #000000   #000000
-client.urgent           #FF0054 #FF0054 #FFFFFF #900000   #FF0054
-client.placeholder      #000000 #000000 #FFFFFF #000000   #000000
+client.focused          #FAE3B0 #FAE3B0 #161320 #FAE3B0   #FAE3B0 
+client.focused_inactive #FAE3B0 #FAE3B0 #161320 #575268   #575268 
+client.unfocused        #0b0912 #0b0912 #F5E0DC #575268   #575268 
+client.urgent           #F28FAD #F28FAD #161320 #F28FAD   #F28FAD 
+client.placeholder      #161320 #161320 #161320 #161320   #161320 
 
-client.background       #FFFFFF
+client.background       #161320 
 
 # Background
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg 
