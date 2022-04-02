@@ -1,8 +1,8 @@
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export QT_QPA_PLATFORMTHEME=qt5ct
-export TERMINAL=kitty
-export EDITOR=/usr/bin/nvim
+#export QT_QPA_PLATFORMTHEME=qt5ct
+#export TERMINAL=kitty
+#export EDITOR=/usr/bin/nvim
 export PATH=/home/jack/go/bin${PATH:+:${PATH}} 
 
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1

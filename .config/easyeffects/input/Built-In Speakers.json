@@ -1,0 +1,30 @@
+{
+    "input": {
+        "blocklist": [],
+        "filter": {
+            "frequency": 1050.0,
+            "inertia": 5.0,
+            "input-gain": 0.0,
+            "mode": "18dB/oct Bandreject",
+            "output-gain": 0.0,
+            "resonance": 3.0
+        },
+        "loudness": {
+            "fft": "4096",
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "std": "ISO226-2003",
+            "volume": 3.0000000000000013
+        },
+        "plugins_order": [
+            "rnnoise",
+            "filter",
+            "loudness"
+        ],
+        "rnnoise": {
+            "input-gain": 0.0,
+            "model-path": "",
+            "output-gain": 0.0
+        }
+    }
+}
