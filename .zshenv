@@ -4,6 +4,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 #export TERMINAL=kitty
 #export EDITOR=/usr/bin/nvim
 export PATH=/home/jack/go/bin${PATH:+:${PATH}} 
+export PATH=/home/jack/.local/bin${PATH:+:${PATH}} 
 
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1
 #export QT_WAYLAND_DISABLE_WINDOWDECORATION=1

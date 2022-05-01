@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Matlab
+Comment=Matlab
+Exec=matlab -desktop
+Categories=Office
+Icon=/home/jack/.local/MATLAB/R2022a/ui/icons/24x24/matlabLogo.svg
+Terminal=false
+StartupWMClass=MATLAB R2022a - academic use
