@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
 # rofi launcher setup
-sh -c "cd .config/rofi && sh setup.sh"
+# sh -c "cd .config/rofi && sh setup.sh"
 
-#i3 related stuff + alacritty
 rm -rf ~/.config/kitty ~/.config/easyeffects ~/.config/omf ~/.config/fish 
 ln -s $PWD/.config/kitty ~/.config/kitty
 ln -s $PWD/.config/easyeffects ~/.config/easyeffects
