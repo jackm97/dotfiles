@@ -20,8 +20,3 @@ ln -s $PWD/.config/fish ~/.config/fish
 #.zshenv
 # rm ~/.zshenv
 # ln -s $PWD/.zshenv ~/.zshenv
-
-#SpaceVim
-curl -sLf https://spacevim.org/install.sh | bash
-rm -rf ~/.SpaceVim.d
-ln -s $PWD/.SpaceVim.d ~/.SpaceVim.d
