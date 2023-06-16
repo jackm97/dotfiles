@@ -3,11 +3,13 @@
 # rofi launcher setup
 # sh -c "cd .config/rofi && sh setup.sh"
 
-rm -rf ~/.config/kitty ~/.config/easyeffects ~/.config/omf ~/.config/fish 
+rm -rf ~/.config/kitty ~/.config/easyeffects ~/.config/omf ~/.config/fish ~/.config/nvim ~/.bash_profile
 ln -s $PWD/.config/kitty ~/.config/kitty
 ln -s $PWD/.config/easyeffects ~/.config/easyeffects
 ln -s $PWD/.config/omf ~/.config/omf
 ln -s $PWD/.config/fish ~/.config/fish
+ln -s $PWD/.config/nvim ~/.config/nvim
+ln -s $PWD/.bash_profile ~/.bash_profile
 
 #oh my zsh
 # rm -rf ~/.oh-my-zsh
