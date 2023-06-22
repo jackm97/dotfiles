@@ -4,12 +4,10 @@ end
 
 set fish_greeting
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/jack/mambaforge/bin/conda
-    eval /home/jack/mambaforge/bin/conda "shell.fish" hook $argv | source
+if test -f /home/jack/miniforge/bin/conda
+    eval /home/jack/miniforge/bin/conda "shell.fish" "hook" $argv | source
 end
 # <<< conda initialize <<<
 
-conda deactivate
