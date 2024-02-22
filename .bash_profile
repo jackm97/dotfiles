@@ -11,4 +11,3 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # Added by Toolbox App
 export PATH="$PATH:/home/jack/.local/share/JetBrains/Toolbox/scripts"
-export PATH="$PATH:/home/jack/.local/share/JetBrains/Toolbox/bin"

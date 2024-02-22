@@ -1,3 +1,6 @@
+package bass
+package foreign-env
+package nvm
 theme clearance
 theme default
 theme sushi

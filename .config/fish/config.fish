@@ -17,4 +17,9 @@ else
 end
 # <<< conda initialize <<<
 
-set -x PATH //var/home/jack/.local/share/JetBrains/Toolbox/scripts/ /var/home/jack/.local/share/JetBrains/Toolbox/bin/ $PATH
+if test -f /home/gpu-dev/.bashrc
+    bass source /home/gpu-dev/.bashrc
+end
+
+set -x PATH $HOME/.pixi/bin $PATH
+pixi completion --shell fish | source
