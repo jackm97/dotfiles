@@ -4,22 +4,6 @@ end
 
 set fish_greeting
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /var/home/jack/miniforge3/bin/conda
-    eval /var/home/jack/miniforge3/bin/conda "shell.fish" hook $argv | source
-else
-    if test -f "/var/home/jack/miniforge3/etc/fish/conf.d/conda.fish"
-        . "/var/home/jack/miniforge3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH /var/home/jack/miniforge3/bin $PATH
-    end
-end
-# <<< conda initialize <<<
-
-if test -f /home/gpu-dev/.bashrc
-    bass source /home/gpu-dev/.bashrc
-end
-
-set -x PATH $HOME/.pixi/bin $PATH
 pixi completion --shell fish | source
+pixi run --manifest-path $HOME/.local/share/termenv/pixi.toml pixi-termenv-fish-completion | source
+eval "$(pixi shell-hook --manifest-path ~/.local/share/termenv/pixi.toml)"

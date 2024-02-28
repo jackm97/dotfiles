@@ -1,2 +1,6 @@
 
 *.swp
+
+.config/fish/fish_variables
+*.bak
+.pixi/

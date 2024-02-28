@@ -6,8 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-export PATH="/usr/local/cuda/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
-# Added by Toolbox App
-export PATH="$PATH:/home/jack/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$HOME/.pixi/bin:$PATH"
+export PATH=$PATH:/var/home/jack/.pixi/bin

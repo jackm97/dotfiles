@@ -1,0 +1,17 @@
+[project]
+name = "termenv"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+pixi-termenv-fish-completion = "python -c \"import subprocess;completions=subprocess.check_output(['pixi', 'completion', '--shell', 'fish']);print(completions.decode('utf-8').replace('pixi', 'pixi-termenv'))\""
+update-env = "python $HOME/.local/share/termenv/update-env.py"
+
+[dependencies]
+compilers = ">=1.7.0,<1.8"
+nvim = ">=0.9.5,<0.10"
+nodejs = ">=12.4.0,<12.5"
+python = ">=3.12.2,<3.13"
+npx = ">=0.1.1,<0.2"
+fish = ">=3.7.0,<3.8"
+

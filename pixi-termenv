@@ -1,0 +1,6 @@
+#!/bin/bash
+
+COMMAND=$1
+shift
+
+pixi ${COMMAND} --manifest-path $HOME/.local/share/termenv/pixi.toml $@
