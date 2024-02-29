@@ -9,7 +9,7 @@ set -x
 WORKDIR="${PWD}"
 
 # Create symlinks to all pre-built configs/envs
-rm -rf ~/.config/kitty ~/.config/easyeffects ~/.config/omf ~/.config/fish ~/.config/nvim ~/.bash_profile ~/.local/share/termenv/
+rm -rf ~/.config/kitty ~/.config/easyeffects ~/.config/omf ~/.config/fish ~/.config/nvim ~/.bash_profile ~/.local/share/termenv
 ln -s "${WORKDIR}"/.config/kitty ~/.config/kitty
 ln -s "${WORKDIR}"/.config/easyeffects ~/.config/easyeffects
 ln -s "${WORKDIR}"/.config/omf ~/.config/omf
@@ -32,7 +32,7 @@ fi
 cp "${WORKDIR}"/pixi-termenv "$HOME/.local/bin"
 
 # enable termenv so we get access to fish
-eval "$(pixi shell-hook)"
+eval "$(pixi shell-hook --manifest-path "${WORKDIR}/termenv/pixi.toml")"
 
 cd ${WORKDIR}
 
