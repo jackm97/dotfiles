@@ -25,11 +25,12 @@ rm -rf $HOME/.pixi
 curl -fsSL https://pixi.sh/install.sh | bash
 
 # add custom pixi-termenv that will operate on termenv
-if [ -f $HOME/.local/bin ]; then
+if ! [ -d $HOME/.local/bin ]; then
 	mkdir -p $HOME/.local/bin/
 fi
 
 cp "${WORKDIR}"/pixi-termenv "$HOME/.local/bin"
+chmod +x "$HOME/.local/bin/pixi-termenv"
 
 # enable termenv so we get access to fish
 eval "$(pixi shell-hook --manifest-path "${WORKDIR}/termenv/pixi.toml")"
